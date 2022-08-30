@@ -3,10 +3,6 @@
 
 int main()
 {
-    StringConverter sc;
-    std::cout << sc.toSnakeCase("camelCase") << std::endl;
-    std::cout << sc.toCamelCase("snake_case") << std::endl;
-    std::cout << sc.toSnakeCase("camelCase") << std::endl;
-
-
+    std::cout << StringConverter::toCamelCase("hello_s_d_a") << std::endl;
+    std::cout << StringConverter::toSnakeCase("isThisFirstEntry") << std::endl;
 }

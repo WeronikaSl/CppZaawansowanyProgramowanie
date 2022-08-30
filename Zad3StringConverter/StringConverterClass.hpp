@@ -6,6 +6,6 @@
 class StringConverter
 {
 public:
-	std::string toSnakeCase(std::string str);
-	std::string toCamelCase(std::string str);
+	static std::string toSnakeCase(std::string str);
+	static std::string toCamelCase(std::string str);
 };
