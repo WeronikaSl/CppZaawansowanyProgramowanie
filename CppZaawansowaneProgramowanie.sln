@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zad5StringCensor", "Zad5Str
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zad4MorseCode", "Zad4MorseCode\Zad4MorseCode.vcxproj", "{FAAAE70A-F526-4E11-9DF0-5D1D83DFF384}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zad9CaesarCipher", "Zad9CaesarCipher\Zad9CaesarCipher.vcxproj", "{B7C98BB5-1B24-46A1-B571-412C2757B6A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{FAAAE70A-F526-4E11-9DF0-5D1D83DFF384}.Release|x64.Build.0 = Release|x64
 		{FAAAE70A-F526-4E11-9DF0-5D1D83DFF384}.Release|x86.ActiveCfg = Release|Win32
 		{FAAAE70A-F526-4E11-9DF0-5D1D83DFF384}.Release|x86.Build.0 = Release|Win32
+		{B7C98BB5-1B24-46A1-B571-412C2757B6A8}.Debug|x64.ActiveCfg = Debug|x64
+		{B7C98BB5-1B24-46A1-B571-412C2757B6A8}.Debug|x64.Build.0 = Debug|x64
+		{B7C98BB5-1B24-46A1-B571-412C2757B6A8}.Debug|x86.ActiveCfg = Debug|Win32
+		{B7C98BB5-1B24-46A1-B571-412C2757B6A8}.Debug|x86.Build.0 = Debug|Win32
+		{B7C98BB5-1B24-46A1-B571-412C2757B6A8}.Release|x64.ActiveCfg = Release|x64
+		{B7C98BB5-1B24-46A1-B571-412C2757B6A8}.Release|x64.Build.0 = Release|x64
+		{B7C98BB5-1B24-46A1-B571-412C2757B6A8}.Release|x86.ActiveCfg = Release|Win32
+		{B7C98BB5-1B24-46A1-B571-412C2757B6A8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
