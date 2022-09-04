@@ -3,8 +3,6 @@
 
 int main()
 {
-
     GuessTheNumber guess;
     guess.guess();
-
 }

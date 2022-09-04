@@ -17,16 +17,12 @@ int GuessTheNumber::getUserInput() const
     return guess;
 }
 
-bool GuessTheNumber::isGuessBigger(int guess)
-{
-    return (guess > _numberToGuess);
-}
 
 void GuessTheNumber::isClose(int guess) const
 {
     int value = _numberToGuess - guess;
     bool condition1 = ((value > 0) && (value <= 3));
-    bool condition2 = ((value <  0) && (value >= 3));
+    bool condition2 = ((value <  0) && (value >= -3));
     if(condition1 || condition2)
     {
         std::cout << "Jesteś już blisko!" << std::endl;
