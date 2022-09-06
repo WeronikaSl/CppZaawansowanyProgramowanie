@@ -5,5 +5,5 @@ int main()
 {
     MorseCodeTranslator mct;
     std::cout << mct.fromMorseCode(".- -... -.-. -..") << std::endl;
-    std::cout << mct.toMorseCode("abcd") << std::endl;
+    std::cout << mct.toMorseCode("hej") << std::endl;
 }
