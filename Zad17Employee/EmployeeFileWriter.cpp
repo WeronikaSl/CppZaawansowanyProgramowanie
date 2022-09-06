@@ -8,7 +8,7 @@ void EmployeeFileWriter::isOpened(const std::ofstream& file) const
 	}
 }
 
-void EmployeeFileWriter::writeToFile(std::vector<std::string> text, std::ofstream& file)
+void EmployeeFileWriter::writeToFile(std::vector<std::string> text, std::ofstream& file) const
 {
 	isOpened(file);
 	for (auto it = text.cbegin(); it < text.cend(); ++it)

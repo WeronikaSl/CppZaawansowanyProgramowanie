@@ -1,10 +1,11 @@
 #pragma once
 #include <string>
 
-enum class Gender {FEMALE, MALE};
-
 class Employee
 {
+public:
+	enum class Gender { FEMALE, MALE, UNKNOWN };
+	Employee(std::string firstName, std::string lastName, std::string email, Gender gender, int salary);
 private:
 	std::string _firstName = {};
 	std::string _lastName = {};
