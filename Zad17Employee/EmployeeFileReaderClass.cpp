@@ -8,7 +8,7 @@ void EmployeeFileReader::isOpened(const std::ifstream& file) const
 	}
 }
 
-std::vector<std::string> EmployeeFileReader::readFromFile(std::ifstream file) const
+std::vector<std::string> EmployeeFileReader::readFromFile(std::ifstream& file) const
 {
 	isOpened(file);
 	std::vector<std::string> text = {};
@@ -19,5 +19,6 @@ std::vector<std::string> EmployeeFileReader::readFromFile(std::ifstream file) co
 		text.push_back(lineInText);
 	}
 
+	file.close();
 	return text;
 }
