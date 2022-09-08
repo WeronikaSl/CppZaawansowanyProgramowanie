@@ -1,15 +1,18 @@
 #pragma once
 #include "Employee.hpp"
+#include "EmployeeFileReaderClass.hpp"
 #include <vector>
-#include <algorithm>
+#include <fstream>
 
 
 class EmployeeManager
 {
 private:
 	std::vector<Employee> _employees = {};
-	std::vector<Employee> createVecOfEmployees(std::vector<std::string> v);
 
 public:
-	EmployeeManager(std::ifstream& file);
+	EmployeeManager();
+	std::vector<Employee> getEmployees() const;
+	void generateLogin();
+	
 };

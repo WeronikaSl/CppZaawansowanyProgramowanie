@@ -127,14 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Employee.cpp" />
     <ClCompile Include="EmployeeFileReaderClass.cpp" />
     <ClCompile Include="EmployeeFileWriter.cpp" />
+    <ClCompile Include="EmployeeManagerClass.cpp" />
     <ClCompile Include="Zad17Employee.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.hpp" />
     <ClInclude Include="EmployeeFileReaderClass.hpp" />
     <ClInclude Include="EmployeeFileWriter.hpp" />
+    <ClInclude Include="EmployeeManagerClass.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

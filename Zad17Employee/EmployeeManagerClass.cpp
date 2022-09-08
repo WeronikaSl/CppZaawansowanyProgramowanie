@@ -1,17 +1,35 @@
 #include "EmployeeManagerClass.hpp"
 
-std::vector<Employee> EmployeeManager::createVecOfEmployees(std::vector<std::string> v) 
-{
-	std::vector<Employee> vecOfEmployees = {};
 
-	auto lambda = [&](std::string line)
-	{
-		//uzyc getline
-	};
-	std::for_each(v.begin(), v.end(), lambda);
+EmployeeManager::EmployeeManager()
+{
+	std::ifstream file("employee_input.csv");
+	EmployeeFileReader reader;
+	_employees = reader.getEmployees(file);
 }
 
-EmployeeManager::EmployeeManager(std::ifstream& file)
+std::vector<Employee> EmployeeManager::getEmployees() const
 {
+	return _employees;
+}
+
+void EmployeeManager::generateLogin()
+{
+	std::string tempLogin = {};
+	char x = 'a';
+
+	for (auto it = _employees.begin(); it < _employees.end(); ++it)
+	{
+		x = ((*it).getFirstName()).at(0);
+		tempLogin.push_back(std::tolower(x));
+		x = ((*it).getFirstName()).at(1);
+		tempLogin.push_back(std::tolower(x));
+		x = ((*it).getLastName()).at(0);
+		tempLogin.push_back(std::tolower(x));
+		x = ((*it).getLastName()).at(1);
+		tempLogin.push_back(std::tolower(x));
+		(*it).setLogin(tempLogin);
+		tempLogin.clear();
+	}
 
 }
