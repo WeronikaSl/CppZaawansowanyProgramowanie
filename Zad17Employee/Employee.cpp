@@ -74,6 +74,11 @@ std::string Employee::getLastName() const
 	return _lastName;
 }
 
+std::string Employee::getLogin() const
+{
+	return _login;
+}
+
 std::ostream& operator<<(std::ostream& s, const Employee& other)
 {
 	s << other.toString() << std::endl;

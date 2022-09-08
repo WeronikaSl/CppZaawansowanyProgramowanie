@@ -17,6 +17,7 @@ public:
 	std::string toString() const;
 	std::string getFirstName() const;
 	std::string getLastName() const;
+	std::string getLogin() const;
 
 private:
 	std::string _firstName = {};

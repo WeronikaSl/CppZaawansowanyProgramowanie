@@ -9,6 +9,7 @@ class EmployeeManager
 {
 private:
 	std::vector<Employee> _employees = {};
+	bool ifLoginExists(std::string login);
 
 public:
 	EmployeeManager();

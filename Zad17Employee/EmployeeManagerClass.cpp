@@ -1,6 +1,22 @@
 #include "EmployeeManagerClass.hpp"
 
 
+bool EmployeeManager::ifLoginExists(std::string login)
+{
+	int countLogins = 0;
+	auto lambda = [&](Employee employee)
+	{
+		if (employee.getLogin() == login)
+		{
+			countLogins++;
+		}
+	};
+
+	std::for_each(_employees.begin(), _employees.end(), lambda);
+
+	return (countLogins > 0);
+}
+
 EmployeeManager::EmployeeManager()
 {
 	std::ifstream file("employee_input.csv");
@@ -18,18 +34,45 @@ void EmployeeManager::generateLogin()
 	std::string tempLogin = {};
 	char x = 'a';
 
-	for (auto it = _employees.begin(); it < _employees.end(); ++it)
+	auto lambda = [&](Employee& employee)
 	{
-		x = ((*it).getFirstName()).at(0);
+		x = (employee.getFirstName()).at(0);
 		tempLogin.push_back(std::tolower(x));
-		x = ((*it).getFirstName()).at(1);
-		tempLogin.push_back(std::tolower(x));
-		x = ((*it).getLastName()).at(0);
-		tempLogin.push_back(std::tolower(x));
-		x = ((*it).getLastName()).at(1);
-		tempLogin.push_back(std::tolower(x));
-		(*it).setLogin(tempLogin);
-		tempLogin.clear();
-	}
 
+		x = (employee.getFirstName()).at(1);
+		tempLogin.push_back(std::tolower(x));
+
+		x = (employee.getLastName()).at(0);
+		tempLogin.push_back(std::tolower(x));
+
+		x = (employee.getLastName()).at(1);
+		tempLogin.push_back(std::tolower(x));
+
+		int size = (employee.getLastName()).size();
+
+		for (size_t i = 2; i < size; ++i)
+		{
+			if (ifLoginExists(tempLogin) == false)
+			{
+				break;
+			}
+			x = (employee.getLastName()).at(i);
+			tempLogin.push_back(std::tolower(x));
+		}
+
+		char a = '1';
+		while (ifLoginExists(tempLogin) == true)
+		{
+			tempLogin.push_back(a);
+			a++;
+			if (a > 57)
+			{
+				break;
+			}
+		}
+		
+		employee.setLogin(tempLogin);
+		tempLogin.clear();
+	};
+	std::for_each(_employees.begin(), _employees.end(), lambda);
 }
