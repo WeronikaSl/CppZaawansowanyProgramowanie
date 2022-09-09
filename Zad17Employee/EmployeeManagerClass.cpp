@@ -117,7 +117,7 @@ void EmployeeManager::generatePasswords()
 
 	auto lambda = [&](Employee& empl)
 	{
-		while (passwordLength != password.size())
+		do
 		{
 			drawnChar = draw(33, 122);
 
@@ -130,7 +130,7 @@ void EmployeeManager::generatePasswords()
 			{
 				regexForPassword(password);
 			}
-		}
+		}while (passwordLength != password.size());
 
 		empl.setPassword(password);
 		password.clear();
