@@ -30,6 +30,11 @@ void Employee::setLogin(std::string login)
 	_login = login;
 }
 
+void Employee::setPassword(std::string password)
+{
+	_password = password;
+}
+
 std::string Employee::genderToString(Employee::Gender gender) const
 {
 	if (gender == Gender::FEMALE)
@@ -61,6 +66,8 @@ std::string Employee::toString() const
 	output.append(std::to_string(_salary));
 	output.append(" Login: ");
 	output.append(_login);
+	output.append(" Hasło: ");
+	output.append(_password);
 	return output;
 }
 

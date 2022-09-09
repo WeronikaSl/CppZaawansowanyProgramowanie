@@ -14,6 +14,7 @@ public:
 	void setGender(Gender gender);
 	void setSalary(double salary);
 	void setLogin(std::string login);
+	void setPassword(std::string password);
 	std::string toString() const;
 	std::string getFirstName() const;
 	std::string getLastName() const;

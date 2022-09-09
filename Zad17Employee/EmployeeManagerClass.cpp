@@ -17,6 +17,36 @@ bool EmployeeManager::ifLoginExists(std::string login)
 	return (countLogins > 0);
 }
 
+int EmployeeManager::draw(int a, int b) const
+{
+	std::random_device r;
+	std::default_random_engine e(r());
+	std::uniform_int_distribution<int> distr(a, b);
+	return distr(e);
+}
+
+bool EmployeeManager::ifCorrectChar(char a) const
+{
+	bool condition1 = ((a >= '0') && (a <= '9'));
+	bool condition2 = ((a >= 'A') && (a <= 'Z'));
+	bool condition3 = ((a >= 'a') && (a <= 'z'));
+	bool condition4 = (a == '!');
+	bool condition5 = (a == '?');
+	bool condition6 = (a == '@');
+	bool condition7 = (a == '+');
+	bool condition8 = (a == '=');
+	bool condition9 = (a == '-');
+	bool condition10 = ((a >= '#') && (a <= '&'));
+	bool mainCondition = condition1 || condition2 || condition3 || condition4 || condition5
+		|| condition6 || condition7 || condition8 || condition9 || condition10;
+	return mainCondition;
+}
+
+void EmployeeManager::regexForPassword(std::string& password) const
+{
+
+}
+
 EmployeeManager::EmployeeManager()
 {
 	std::ifstream file("employee_input.csv");
@@ -29,7 +59,7 @@ std::vector<Employee> EmployeeManager::getEmployees() const
 	return _employees;
 }
 
-void EmployeeManager::generateLogin()
+void EmployeeManager::generateLogins()
 {
 	std::string tempLogin = {};
 	char x = 'a';
@@ -76,3 +106,38 @@ void EmployeeManager::generateLogin()
 	};
 	std::for_each(_employees.begin(), _employees.end(), lambda);
 }
+
+void EmployeeManager::generatePasswords()
+{
+	int passwordLength = draw(8, 12);
+	std::string password = {};
+	char drawnChar = 'a';
+
+	auto lambda = [&](Employee& empl)
+	{
+		while (passwordLength != password.size())
+		{
+			drawnChar = draw(33, 122);
+
+			if (ifCorrectChar(drawnChar))
+			{
+				password.push_back(drawnChar);
+			}
+
+			if (password.size() == passwordLength)
+			{
+				//tu bedzie wywołana funkcja regex match (będzie wydzielone do osobnej funkcji)
+				//w tej funkcji password referencją i jeśli sie ni zgadza z regex to tam clear
+				regexForPassword(password);
+			}
+		}
+
+		empl.setPassword(password);
+		password.clear();
+	};
+	
+	std::for_each(_employees.begin(), _employees.end(), lambda);
+
+}
+
+
