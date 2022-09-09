@@ -19,6 +19,8 @@ public:
 	std::string getFirstName() const;
 	std::string getLastName() const;
 	std::string getLogin() const;
+	std::string getEmail() const;
+	std::string getPassword() const;
 
 private:
 	std::string _firstName = {};

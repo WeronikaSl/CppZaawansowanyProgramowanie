@@ -86,6 +86,16 @@ std::string Employee::getLogin() const
 	return _login;
 }
 
+std::string Employee::getEmail() const
+{
+	return _email;
+}
+
+std::string Employee::getPassword() const
+{
+	return _password;
+}
+
 std::ostream& operator<<(std::ostream& s, const Employee& other)
 {
 	s << other.toString() << std::endl;

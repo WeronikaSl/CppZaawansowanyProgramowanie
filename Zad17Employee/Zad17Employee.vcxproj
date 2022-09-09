@@ -138,6 +138,8 @@
     <ClInclude Include="EmployeeFileReaderClass.hpp" />
     <ClInclude Include="EmployeeFileWriter.hpp" />
     <ClInclude Include="EmployeeManagerClass.hpp" />
+    <ClInclude Include="EmployeeReaderAbstractClass.hpp" />
+    <ClInclude Include="EmployeeWriterAbstractClass.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

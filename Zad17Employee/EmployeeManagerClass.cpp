@@ -1,7 +1,7 @@
 #include "EmployeeManagerClass.hpp"
 
 
-bool EmployeeManager::ifLoginExists(std::string login)
+bool EmployeeManager::ifLoginExists(std::string login) const
 {
 	int countLogins = 0;
 	auto lambda = [&](Employee employee)
@@ -44,14 +44,16 @@ bool EmployeeManager::ifCorrectChar(char a) const
 
 void EmployeeManager::regexForPassword(std::string& password) const
 {
-
+	std::regex passwordRegex ("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!?@#$%&+=-]).{8,12}$");
+	if (false == std::regex_match(password, passwordRegex))
+	{
+		password.clear();
+	}
 }
 
-EmployeeManager::EmployeeManager()
+EmployeeManager::EmployeeManager(std::vector<Employee> employees)
 {
-	std::ifstream file("employee_input.csv");
-	EmployeeFileReader reader;
-	_employees = reader.getEmployees(file);
+	_employees = employees;
 }
 
 std::vector<Employee> EmployeeManager::getEmployees() const
@@ -126,8 +128,6 @@ void EmployeeManager::generatePasswords()
 
 			if (password.size() == passwordLength)
 			{
-				//tu bedzie wywołana funkcja regex match (będzie wydzielone do osobnej funkcji)
-				//w tej funkcji password referencją i jeśli sie ni zgadza z regex to tam clear
 				regexForPassword(password);
 			}
 		}
@@ -138,6 +138,25 @@ void EmployeeManager::generatePasswords()
 	
 	std::for_each(_employees.begin(), _employees.end(), lambda);
 
+}
+
+std::vector<std::string> EmployeeManager::getDataForPasswordsFile() const
+{
+	std::vector<std::string> data = {};
+	std::stringstream ss;
+
+	auto lambda = [&](Employee employee)
+	{
+		ss  << employee.getLogin() << ","
+			<< employee.getEmail() << ","
+			<< employee.getPassword() << "\n";
+			
+		data.push_back(ss.str());
+		ss.str(std::string()); 
+	};
+	std::for_each(_employees.cbegin(), _employees.cend(), lambda);
+
+	return data;
 }
 
 
