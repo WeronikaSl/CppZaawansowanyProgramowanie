@@ -140,23 +140,6 @@ void EmployeeManager::generatePasswords()
 
 }
 
-std::vector<std::string> EmployeeManager::getDataForPasswordsFile() const
-{
-	std::vector<std::string> data = {};
-	std::stringstream ss;
 
-	auto lambda = [&](Employee employee)
-	{
-		ss  << employee.getLogin() << ","
-			<< employee.getEmail() << ","
-			<< employee.getPassword() << "\n";
-			
-		data.push_back(ss.str());
-		ss.str(std::string()); 
-	};
-	std::for_each(_employees.cbegin(), _employees.cend(), lambda);
-
-	return data;
-}
 
 

@@ -96,6 +96,16 @@ std::string Employee::getPassword() const
 	return _password;
 }
 
+std::string Employee::getGender() const
+{
+	return genderToString(_gender);
+}
+
+double Employee::getSalary() const
+{
+	return _salary;
+}
+
 std::ostream& operator<<(std::ostream& s, const Employee& other)
 {
 	s << other.toString() << std::endl;

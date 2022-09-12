@@ -30,6 +30,12 @@
     <ClCompile Include="EmployeeManagerClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EmployeeFileJSONWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeJSONWriterPasswordsClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.hpp">
@@ -48,6 +54,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EmployeeWriterAbstractClass.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeeFileJSONWriter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeeJSONWriterPasswordsClass.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\JSON\Zad1Json\json\json.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

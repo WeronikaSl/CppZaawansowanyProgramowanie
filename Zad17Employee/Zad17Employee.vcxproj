@@ -128,15 +128,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="EmployeeFileJSONWriter.cpp" />
     <ClCompile Include="EmployeeFileReaderClass.cpp" />
     <ClCompile Include="EmployeeFileWriter.cpp" />
+    <ClCompile Include="EmployeeJSONWriterPasswordsClass.cpp" />
     <ClCompile Include="EmployeeManagerClass.cpp" />
     <ClCompile Include="Zad17Employee.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\JSON\Zad1Json\json\json.hpp" />
     <ClInclude Include="Employee.hpp" />
+    <ClInclude Include="EmployeeFileJSONWriter.hpp" />
     <ClInclude Include="EmployeeFileReaderClass.hpp" />
     <ClInclude Include="EmployeeFileWriter.hpp" />
+    <ClInclude Include="EmployeeJSONWriterPasswordsClass.hpp" />
     <ClInclude Include="EmployeeManagerClass.hpp" />
     <ClInclude Include="EmployeeReaderAbstractClass.hpp" />
     <ClInclude Include="EmployeeWriterAbstractClass.hpp" />

@@ -21,6 +21,8 @@ public:
 	std::string getLogin() const;
 	std::string getEmail() const;
 	std::string getPassword() const;
+	std::string getGender() const;
+	double getSalary() const;
 
 private:
 	std::string _firstName = {};

@@ -22,6 +22,6 @@ public:
 	std::vector<Employee> getEmployees() const;
 	void generateLogins();
 	void generatePasswords();
-	std::vector<std::string> getDataForPasswordsFile() const;
+
 	
 };
