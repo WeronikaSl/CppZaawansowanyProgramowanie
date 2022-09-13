@@ -37,18 +37,31 @@ void Employee::setPassword(std::string password)
 
 std::string Employee::genderToString(Employee::Gender gender) const
 {
-	if (gender == Gender::FEMALE)
+	switch (gender)
 	{
+	case Gender::FEMALE:
 		return "Kobieta";
+		break;
+	case Gender::MALE:
+		return "Mezczyzna";
+		break;
+	default:
+		return "Nieokreslona";
+		break;
 	}
-	else if (gender == Gender::MALE)
-	{
-		return "Mężczyzna";
-	}
-	else
-	{
-		return "Nieokreślona";
-	}
+
+	//if (gender == Gender::FEMALE)
+	//{
+	//	return "Kobieta";
+	//}
+	//else if (gender == Gender::MALE)
+	//{
+	//	return "Mężczyzna";
+	//}
+	//else
+	//{
+	//	return "Nieokreślona";
+	//}
 }
 
 std::string Employee::toString() const
