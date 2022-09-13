@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zad15Coin", "Zad15Coin\Zad1
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zad17Employee", "Zad17Employee\Zad17Employee.vcxproj", "{79A85A4C-E9F2-4D32-B29E-4CC9C140A137}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zad16Templates", "Zad16Templates\Zad16Templates.vcxproj", "{1A77644D-34A5-4011-A25C-BF8905589AE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{79A85A4C-E9F2-4D32-B29E-4CC9C140A137}.Release|x64.Build.0 = Release|x64
 		{79A85A4C-E9F2-4D32-B29E-4CC9C140A137}.Release|x86.ActiveCfg = Release|Win32
 		{79A85A4C-E9F2-4D32-B29E-4CC9C140A137}.Release|x86.Build.0 = Release|Win32
+		{1A77644D-34A5-4011-A25C-BF8905589AE1}.Debug|x64.ActiveCfg = Debug|x64
+		{1A77644D-34A5-4011-A25C-BF8905589AE1}.Debug|x64.Build.0 = Debug|x64
+		{1A77644D-34A5-4011-A25C-BF8905589AE1}.Debug|x86.ActiveCfg = Debug|Win32
+		{1A77644D-34A5-4011-A25C-BF8905589AE1}.Debug|x86.Build.0 = Debug|Win32
+		{1A77644D-34A5-4011-A25C-BF8905589AE1}.Release|x64.ActiveCfg = Release|x64
+		{1A77644D-34A5-4011-A25C-BF8905589AE1}.Release|x64.Build.0 = Release|x64
+		{1A77644D-34A5-4011-A25C-BF8905589AE1}.Release|x86.ActiveCfg = Release|Win32
+		{1A77644D-34A5-4011-A25C-BF8905589AE1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
