@@ -19,9 +19,11 @@ void iota_n(OutputIterator& dest, SizeType n, ValueType value)
 template <class InputIt, class Size, class UnaryFunction>
 void for_each_n(InputIt first, InputIt last, Size n, UnaryFunction f)
 {
-    for (auto it = first; it != last; it += n) //nie działa dla listy
+    auto it = first;
+    while (it != last)
     {
         f(*it);
+        std::advance(it, n);
     }
 
 }
@@ -63,11 +65,11 @@ int main()
 
     std::cout << std::endl;
 
-    //std::list<double> l2 = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9 };
-    //auto lambda2 = [&](double val)
-    //{
-    //    val = val * 2;
-    //    std::cout << val << std::endl;
-    //};
-    //for_each_n(l2.begin(), l2.end(), 3, lambda2);
+    std::list<double> l2 = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9 };
+    auto lambda2 = [&](double val)
+    {
+        val = val * 2;
+        std::cout << val << std::endl;
+    };
+    for_each_n(l2.begin(), l2.end(), 5, lambda2);
 }
