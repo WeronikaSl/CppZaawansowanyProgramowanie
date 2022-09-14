@@ -6,7 +6,6 @@ class Computer
 {
 private:
 	unsigned short _points = 0;
-
 public:
 	unsigned short move() const;
 	bool hasWon() const;

@@ -2,15 +2,14 @@
 #include "RockPaperScissorsAbstractClass.hpp"
 #include "PlayerClass.hpp"
 #include "ComputerClass.hpp"
-#include <memory>
 
-class RockPaperScissorsWithComputer : public RockPaperScissorsAbstract
+class RockPaperScissorsWithComputer : public virtual RockPaperScissorsAbstract
 {
 private:
 	Player _player;
 	Computer _computer;
-	void whoGetsPoint(RPS playerMove, RPS computerMove);
-	void displayWhoWon(unsigned short playersPoints, unsigned short computersPoints);
+	int whoGetsPoint(RPS playerMove, RPS computerMove);
+	void displayWhoWon(unsigned short playersPoints, unsigned short computersPoints) const;
 public:
 	void game() override;
 };

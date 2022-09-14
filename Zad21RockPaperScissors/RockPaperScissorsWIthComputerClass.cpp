@@ -1,51 +1,50 @@
 #include "RockPaperScissorsWIthComputerClass.hpp"
 
-void RockPaperScissorsWithComputer::whoGetsPoint(RPS playerMove, RPS computerMove)
+int RockPaperScissorsWithComputer::whoGetsPoint(RPS playerMove, RPS computerMove)
 {
-	if (computerMove == RPS::PAPER && playerMove == RPS::PAPER)
-	{
-		std::cout << "Remis, nikt nie dostaje punktu" << std::endl; //zrobić funkcję
-	}
-	if (computerMove == RPS::ROCK && playerMove == RPS::ROCK)
-	{
-		std::cout << "Remis, nikt nie dostaje punktu" << std::endl; //zrobić funkcję
-	}
-	if (computerMove == RPS::SCISSORS && playerMove == RPS::SCISSORS)
-	{
-		std::cout << "Remis, nikt nie dostaje punktu" << std::endl; //zrobić funkcję
-	}
-
 	if (playerMove == RPS::PAPER && computerMove == RPS::ROCK)
 	{
 		_player.addPoint();
+		std::cout << "Zdobywasz 1 punkt" << std::endl;
+		return 0;
 	}
 	if (playerMove == RPS::ROCK && computerMove == RPS::SCISSORS)
 	{
 		_player.addPoint();
+		std::cout << "Zdobywasz 1 punkt" << std::endl;
+		return 0;
 	}
 	if (playerMove == RPS::SCISSORS && computerMove == RPS::PAPER)
 	{
 		_player.addPoint();
+		std::cout << "Zdobywasz 1 punkt" << std::endl;
+		return 0;
 	}
 
 
 	if (computerMove == RPS::PAPER && playerMove == RPS::ROCK)
 	{
 		_computer.addPoint();
+		return 0;
 	}
 	if (computerMove == RPS::ROCK && playerMove == RPS::SCISSORS)
 	{
 		_computer.addPoint();
+		return 0;
 	}
 	if (computerMove == RPS::SCISSORS && playerMove == RPS::PAPER)
 	{
 		_computer.addPoint();
+		return 0;
 	}
 
+	return isRemis(playerMove, computerMove);
+
+	return 0;
 
 }
 
-void RockPaperScissorsWithComputer::displayWhoWon(unsigned short playersPoints, unsigned short computersPoints)
+void RockPaperScissorsWithComputer::displayWhoWon(unsigned short playersPoints, unsigned short computersPoints) const
 {
 	if (playersPoints == 3)
 	{
@@ -59,6 +58,7 @@ void RockPaperScissorsWithComputer::displayWhoWon(unsigned short playersPoints, 
 
 void RockPaperScissorsWithComputer::game()
 {
+	std::cout << std::endl << "Wygrywa ta strona, która pierwsza zdobędzie 3 pkt :)" << std::endl << std::endl;
 	unsigned short computer = 0;
 	while (_player.hasWon() != true && _computer.hasWon() != true)
 	{
@@ -68,5 +68,6 @@ void RockPaperScissorsWithComputer::game()
 		_computer.displayComputersMove(computer);
 		whoGetsPoint(playersMove, computersMove);
 		displayWhoWon(_player.getPoints(), _computer.getPoints());
+		std::cout << std::endl;
 	}
 }

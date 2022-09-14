@@ -27,6 +27,12 @@
     <ClCompile Include="RockPaperScissorsWIthComputerClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RockPaperScissors2PlayersClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RockPaperScissorsAbstractClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RockPaperScissorsAbstractClass.hpp">
@@ -39,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ComputerClass.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RockPaperScissors2PlayersClass.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

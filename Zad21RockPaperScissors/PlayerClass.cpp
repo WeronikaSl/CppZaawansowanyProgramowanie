@@ -3,7 +3,7 @@
 unsigned short Player::move() const
 {
     unsigned short move = 0;
-    std::cout << "Wybierz numer (0.Kamień 1.Papier 2.Nożyce): ";
+    std::cout << "Wybierz numer (1.Kamień 2.Papier 3.Nożyce): ";
     std::cin >> move;
     return move;
 }
@@ -16,7 +16,7 @@ bool Player::hasWon() const
 void Player::addPoint()
 {
     _points++;
-    std::cout << "Zdobywasz 1 punkt" << std::endl;
+
 }
 
 unsigned short Player::getPoints() const

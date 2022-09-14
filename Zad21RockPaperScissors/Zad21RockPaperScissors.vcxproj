@@ -129,12 +129,15 @@
   <ItemGroup>
     <ClCompile Include="ComputerClass.cpp" />
     <ClCompile Include="PlayerClass.cpp" />
+    <ClCompile Include="RockPaperScissors2PlayersClass.cpp" />
+    <ClCompile Include="RockPaperScissorsAbstractClass.cpp" />
     <ClCompile Include="RockPaperScissorsWIthComputerClass.cpp" />
     <ClCompile Include="Zad21RockPaperScissors.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ComputerClass.hpp" />
     <ClInclude Include="PlayerClass.hpp" />
+    <ClInclude Include="RockPaperScissors2PlayersClass.hpp" />
     <ClInclude Include="RockPaperScissorsAbstractClass.hpp" />
     <ClInclude Include="RockPaperScissorsWIthComputerClass.hpp" />
   </ItemGroup>
