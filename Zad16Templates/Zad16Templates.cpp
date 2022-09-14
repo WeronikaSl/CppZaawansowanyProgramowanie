@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <vector>
 #include <list>
+#include <iterator>
+
 
 //pkt a
 template <typename OutputIterator, typename SizeType, typename ValueType>
@@ -20,7 +22,7 @@ template <class InputIt, class Size, class UnaryFunction>
 void for_each_n(InputIt first, InputIt last, Size n, UnaryFunction f)
 {
     auto it = first;
-    while (it != last)
+    while (it < last)
     {
         f(*it);
         std::advance(it, n);
