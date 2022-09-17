@@ -21,12 +21,16 @@ void iota_n(OutputIterator& dest, SizeType n, ValueType value)
 template <class InputIt, class Size, class UnaryFunction>
 void for_each_n(InputIt first, InputIt last, Size n, UnaryFunction f)
 {
+    unsigned short howManyIncrements = ((std::distance(first, last) / n));
     auto it = first;
-    while (it < last)
+
+    f(*it);
+    for (size_t i = 0; i < howManyIncrements; ++i)
     {
-        f(*it);
         std::advance(it, n);
+        f(*it);
     }
+
 
 }
 
@@ -70,7 +74,6 @@ int main()
     std::list<double> l2 = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9 };
     auto lambda2 = [&](double val)
     {
-        val = val * 2;
         std::cout << val << std::endl;
     };
     for_each_n(l2.begin(), l2.end(), 5, lambda2);
