@@ -1,5 +1,7 @@
 #include "SlotMachineClass.hpp"
 
+SlotMachine SlotMachine::game;
+
 std::ostream& operator<<(std::ostream& s, const Symbols& other)
 {
     switch (other)
@@ -90,7 +92,7 @@ void SlotMachine::game()
     countPoints();
 }
 
-SlotMachine SlotMachine::getInstance()
+SlotMachine& SlotMachine::getInstance()
 {
-    return SlotMachine();
+    //return game
 }

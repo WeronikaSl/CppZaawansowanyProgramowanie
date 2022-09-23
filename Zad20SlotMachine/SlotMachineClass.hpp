@@ -20,10 +20,12 @@ private:
 	std::vector<Symbols> drawSymbols() const;
 	void countPoints();
 	void printSymbols() const;
+	static SlotMachine game;
 public:
 	void game();
-	static SlotMachine getInstance();
+	static SlotMachine& getInstance();
 };
+
 
 std::ostream& operator<<(std::ostream& s, const Symbols& other);
 
