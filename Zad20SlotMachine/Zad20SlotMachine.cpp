@@ -3,5 +3,6 @@
 
 int main()
 {
-	SlotMachine::getInstance().game();
+	SlotMachine sm;
+	sm.game();
 }

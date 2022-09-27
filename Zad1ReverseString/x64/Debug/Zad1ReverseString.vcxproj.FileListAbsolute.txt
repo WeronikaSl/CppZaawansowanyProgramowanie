@@ -1,0 +1,2 @@
+C:\Users\Weronika Słowińska\OneDrive\Desktop\CPP\CppZaawansowaneProgramowanie\x64\Debug\Zad1ReverseString.exe.lastcodeanalysissucceeded
+C:\Users\Weronika Słowińska\OneDrive\Desktop\CPP\CppZaawansowaneProgramowanie\Zad1ReverseString\x64\Debug\NativeCodeAnalysis.read.1.tlog

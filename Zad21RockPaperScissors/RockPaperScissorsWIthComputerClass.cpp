@@ -63,8 +63,8 @@ void RockPaperScissorsWithComputer::game()
 	while (_player.hasWon() != true && _computer.hasWon() != true)
 	{
 		computer = _computer.move();
-		RPS playersMove = static_cast<RPS>(_player.move());
-		RPS computersMove = static_cast<RPS>(computer);
+		const RPS playersMove = static_cast<RPS>(_player.move());
+		const RPS computersMove = static_cast<RPS>(computer);
 		_computer.displayComputersMove(computer);
 		whoGetsPoint(playersMove, computersMove);
 		displayWhoWon(_player.getPoints(), _computer.getPoints());

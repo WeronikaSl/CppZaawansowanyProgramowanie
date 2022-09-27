@@ -1,6 +1,5 @@
 #include "SlotMachineClass.hpp"
 
-SlotMachine SlotMachine::game;
 
 std::ostream& operator<<(std::ostream& s, const Symbols& other)
 {
@@ -41,7 +40,7 @@ std::vector<Symbols> SlotMachine::drawSymbols() const
 {
     std::random_device r;
     std::default_random_engine e(r());
-    std::uniform_int_distribution<int> distr(1, 8);
+    std::uniform_int_distribution<uint16_t> distr(1, 8);
 
     std::vector<Symbols> symbols (5, Symbols::EXCLAMATIONMARK);    
     std::for_each(symbols.begin(), symbols.end(), [&distr, &e](Symbols& s) {s = static_cast<Symbols>(distr(e));});
@@ -51,8 +50,8 @@ std::vector<Symbols> SlotMachine::drawSymbols() const
 
 void SlotMachine::countPoints()
 {
-    std::map<Symbols, unsigned short> amountsOfSymbols = {};
-    unsigned short amountOfEach = 0;
+    std::map<Symbols, uint16_t> amountsOfSymbols = {};
+    uint16_t amountOfEach = 0;
     for (size_t i = 1; i <= 8; ++i)
     {
         amountOfEach = std::count(_drawnSymbols.cbegin(), _drawnSymbols.cend(), static_cast<Symbols>(i));
@@ -92,7 +91,4 @@ void SlotMachine::game()
     countPoints();
 }
 
-SlotMachine& SlotMachine::getInstance()
-{
-    //return game
-}
+

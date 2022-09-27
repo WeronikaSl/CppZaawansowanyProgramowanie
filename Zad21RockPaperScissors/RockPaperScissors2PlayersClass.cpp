@@ -64,9 +64,9 @@ void RockPaperScissors2Players::game()
 
 	while (_player1.hasWon() != true && _player2.hasWon() != true)
 	{
-		RPS player1Move = static_cast<RPS>(_player1.move());
+		const RPS player1Move = static_cast<RPS>(_player1.move());
 		system("CLS");
-		RPS player2Move = static_cast<RPS>(_player2.move());
+		const RPS player2Move = static_cast<RPS>(_player2.move());
 		whoGetsPoint(player1Move, player2Move);
 		displayWhoWon(_player1.getPoints(), _player2.getPoints());
 		std::cout << std::endl;

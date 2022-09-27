@@ -17,4 +17,5 @@ int RockPaperScissorsAbstract::isRemis(RPS firstMove, RPS secondMove) const
 		std::cout << "Remis, nikt nie dostaje punktu" << std::endl;
 		return 0;
 	}
+	return 0;
 }

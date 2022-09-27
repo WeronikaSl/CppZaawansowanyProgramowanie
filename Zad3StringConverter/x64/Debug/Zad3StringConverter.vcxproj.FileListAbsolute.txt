@@ -1,0 +1,2 @@
+C:\Users\Weronika Słowińska\OneDrive\Desktop\CPP\CppZaawansowaneProgramowanie\x64\Debug\Zad3StringConverter.exe.lastcodeanalysissucceeded
+C:\Users\Weronika Słowińska\OneDrive\Desktop\CPP\CppZaawansowaneProgramowanie\Zad3StringConverter\x64\Debug\NativeCodeAnalysis.read.1.tlog
